@@ -8,14 +8,15 @@
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["jest", "node"]
   },
   "include": [
     "src/**/*.ts",
@@ -24,6 +25,7 @@
     "src/**/*.vue",
     "types/**/*.d.ts",
     "build/**/*.ts",
+    "__test__/**/*.ts",
     "vite.config.ts"
   ]
 }
