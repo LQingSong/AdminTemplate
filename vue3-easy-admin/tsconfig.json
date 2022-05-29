@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["jest", "node"]
+    "types": ["jest", "node", "element-plus/global"]
   },
   "include": [
     "src/**/*.ts",
