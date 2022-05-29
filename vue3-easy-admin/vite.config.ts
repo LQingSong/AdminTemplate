@@ -1,6 +1,6 @@
 import { defineConfig, loadEnv, UserConfig } from "vite";
-import { createVitePlugins } from "build/vite/plugins";
-import { warpperEnv } from "build/utils";
+import { createVitePlugins } from "./build/vite/plugins";
+import { warpperEnv } from "./build/utils";
 import pkg from "./package.json";
 import dayjs from "dayjs";
 
@@ -21,6 +21,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
     plugins: createVitePlugins(warpperEnv(env), command === "build"),
     envDir: "envconfig",
     server: {
+      open: true,
       port: VITE_PORT,
     },
     // 定义全局常量替换方式
